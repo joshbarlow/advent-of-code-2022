@@ -14,6 +14,8 @@ def calculateShortestPath(inputDataArray):
         for x in range(len(inputDataArray[0])):
             nodeList.append(node(inputDataArray[y][x],x,y,len(inputDataArray[0]),len(inputDataArray)))
     
+    
+
     return 0
 
 class node:
@@ -22,7 +24,7 @@ class node:
         
         self.x = x
         self.y = y
-        self.height = height
+        self.height = ord(height) - 96
 
         self.pathCost = 100000000
         self.previousNode = -1
